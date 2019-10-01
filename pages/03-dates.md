@@ -4,14 +4,7 @@ title: "Write dates like YYYY-MM-DD"
 description: "Data organization: formatting dates"
 ---
 
-
-
-
-When you're talking about formatting dates, you've got to lead with
-this [xdcd](https://xkcd.com/1179/) comic:
-
-[![xkcd comic on date format](https://imgs.xkcd.com/comics/iso_8601.png)](https://xkcd.com/1179/)
-<br/> [xkcd.com](https://xkcd.com/1179/)
+# Dates
 
 Excel does
 [crazy things with dates](https://storify.com/kara_woo/excel-date-system-fiasco). It
@@ -24,26 +17,31 @@ data come out of Excel.
 
 Excel also has a tendency to turn other things into dates:
 
-[![first oct-4 tweet](../assets/pics/oct4_tweet_1.png)](https://twitter.com/rdpeng/status/622067081748463616)
+* Example Gene names -> Dates
 
-[![second oct-4 tweet](../assets/pics/oct4_tweet_2.png)](https://twitter.com/rdpeng/status/622067435022123008)
+---
 
-Personally, I'd be inclined to use a plain text format for columns in an Excel worksheet
-that are going to contain dates, so that it doesn't do anything to them:
+# Dates (2)
 
-- Select the column
-- In the menu bar, select Format → Cells
-- Choose "Text" on the left
+* Recommendation: Format cells as plain text, so that Excel doesn't do anything to them:
 
-Alternatively, you could
+    * Select the column
+    * In the menu bar, select Format → Cells
+    * Choose "Text" on the left
+
+* Alternatively, you could
 [create three separate columns](https://twitter.com/kara_woo/status/628625716590960641)
 with year, month, and day. Those will be ordinary integers, and so
 Excel won't mess them up.
 
-But really what I wanted to emphasize here: be consistent in the way
+* But really what I wanted to emphasize here: be consistent in the way
 in which you write dates. And really, always use the `YYYY-MM-DD`
 format, as in the [xkcd comic, above](https://xkcd.com/1179/) (or
 put the year, month, and day in separate columns, if you want).
+
+---
+
+# Dates (Example)
 
 I have an old Excel spreadsheet in front of me that looks a bit like
 this:
@@ -128,8 +126,3 @@ different date formats within a column can cause headaches later.
 
 Use care about dates, and be consistent.
 
----
-
-Next up: [Fill in all of the cells](no_empty_cells.html).
-
-(Previous: [Be consistent](consistency.html).)

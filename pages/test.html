@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Projektrat" />
+  <meta name="date" content="2019-10-01" />
+  <title>Data organisation in spreadsheets</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Data organisation in spreadsheets</h1>
+  <p class="author">
+Projektrat
+  </p>
+  <p class="date">2019-10-01</p>
+</div>
+<div id="inhalt" class="slide section level1">
+<h1>Inhalt</h1>
+<ul class="incremental">
+<li>Vorschläge für gute Praxis der Datendokumentation in Spreadsheets (Excel)
+<ul class="incremental">
+<li>Geschrieben aus Sicht des Statistikers/Datenanalysten</li>
+<li>Nicht alles gilt streng für uns / abwägen notwendig</li>
+</ul></li>
+<li>Inhalte von http://kbroman.org/dataorg/, stark gekürzt
+<ul class="incremental">
+<li>Broman KW, Woo KH (2018) Data organization in spreadsheets. The American Statistician 78:2–10 (doi:10.1080/00031305.2017.1375989)</li>
+</ul></li>
+</ul>
+</div>
+<div id="be-consistent" class="slide section level1">
+<h1>Be consistent</h1>
+<p>The first rule of data organization is <em>be consistent</em>.</p>
+<ul class="incremental">
+<li><p><strong>Use consistent codes for categorical variables.</strong> For a categorical variable like <em>sex</em>, use a single common value for males (e.g. “<code>male</code>”) and a single common value for females (e.g. “<code>female</code>”).</p></li>
+<li><p><strong>Use a single fixed code for any missing values.</strong> Most prefer “NA”, but also other possibilities, e.g. “-”. Definitely don’t use a numeric value like <code>-999</code> or <code>999</code>; Also, don’t insert a note in place of the data, explaining why it’s missing. Rather, make a separate column with such notes.</p></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<ul class="incremental">
+<li><p><strong>Use consistent IDs.</strong> If sometimes it’s “<code>153</code>” and sometimes “<code>mouse153</code>” and sometimes “<code>mouse-153F</code>” and sometimes “<code>Mouse153</code>”, there’s going to be extra work to figure out who’s who.</p></li>
+<li><p><strong>Use a common data layout in multiple files.</strong> If your data are in multiple files, use the same layout in all files. (More on layout <a href="rectangle.html">here</a>.)</p></li>
+<li><p><strong>Be careful about extra spaces within cells.</strong> A blank cell is different than a cell that contains a single space. And “<code>male</code>” is different from “<code>male</code>” (that is, with spaces at the beginning and end). These can be a headache later on.</p></li>
+</ul>
+</div>
+</body>
+</html>
