@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Projektrat">
+  <meta name="dcterms.date" content="2019-10-01">
+  <title>Data organisation in spreadsheets</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Data organisation in spreadsheets</h1>
+  <p class="author">Projektrat</p>
+  <p class="date">2019-10-01</p>
+</section>
+
+<section id="inhalt" class="slide level1">
+<h1>Inhalt</h1>
+<ul>
+<li class="fragment">Vorschläge für gute Praxis der Datendokumentation in Spreadsheets (Excel)
+<ul>
+<li class="fragment">Geschrieben aus Sicht des Statistikers/Datenanalysten</li>
+<li class="fragment">Nicht alles gilt streng für uns / abwägen notwendig</li>
+</ul></li>
+<li class="fragment">Inhalte von http://kbroman.org/dataorg/, stark gekürzt
+<ul>
+<li class="fragment">Broman KW, Woo KH (2018) Data organization in spreadsheets. The American Statistician 78:2–10 (doi:10.1080/00031305.2017.1375989)</li>
+</ul></li>
+</ul>
+</section>
+<section id="be-consistent" class="slide level1">
+<h1>Be consistent</h1>
+<p>The first rule of data organization is <em>be consistent</em>.</p>
+<ul>
+<li class="fragment"><p><strong>Use consistent codes for categorical variables.</strong> For a categorical variable like <em>sex</em>, use a single common value for males (e.g. “<code>male</code>”) and a single common value for females (e.g. “<code>female</code>”).</p></li>
+<li class="fragment"><p><strong>Use a single fixed code for any missing values.</strong> Most prefer “NA”, but also other possibilities, e.g. “-”. Definitely don’t use a numeric value like <code>-999</code> or <code>999</code>; Also, don’t insert a note in place of the data, explaining why it’s missing. Rather, make a separate column with such notes.</p></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<ul>
+<li class="fragment"><p><strong>Use consistent IDs.</strong> If sometimes it’s “<code>153</code>” and sometimes “<code>mouse153</code>” and sometimes “<code>mouse-153F</code>” and sometimes “<code>Mouse153</code>”, there’s going to be extra work to figure out who’s who.</p></li>
+<li class="fragment"><p><strong>Use a common data layout in multiple files.</strong> If your data are in multiple files, use the same layout in all files. (More on layout <a href="rectangle.html">here</a>.)</p></li>
+<li class="fragment"><p><strong>Be careful about extra spaces within cells.</strong> A blank cell is different than a cell that contains a single space. And “<code>male</code>” is different from “<code>male</code>” (that is, with spaces at the beginning and end). These can be a headache later on.</p></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
